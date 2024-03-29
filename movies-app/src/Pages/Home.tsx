@@ -32,6 +32,7 @@ const Home = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const searchInput = searchParams.get('search');
+    const [movieFound, setMovieFound] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -123,6 +124,11 @@ const Home = () => {
                 </button>
             </form>
 
+            {
+                movieData.results.length == 0 && (
+                    <div className='w-screen h-screen text-center text-[100px]'>No movie found</div>
+                )
+            }
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {movieData.results && movieData.results.map(movie => (
                     <MovieCard key={movie.id} movie={movie} />

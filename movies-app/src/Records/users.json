@@ -11,7 +11,42 @@
     },
     {
         "id": 3,
-        "username": "master assassin",
-        "password": "blacknabad"
+        "username": "sarahsmith",
+        "password": "Sunshine123"
+    },
+    {
+        "id": 4,
+        "username": "mike.jackson",
+        "password": "MJrocks!23"
+    },
+    {
+        "id": 5,
+        "username": "azir main",
+        "password": "buff azir riot"
+    },
+    {
+        "id": 6,
+        "username": "davidbrown87",
+        "password": "Brownie#1987"
+    },
+    {
+        "id": 7,
+        "username": "lily.miller",
+        "password": "LilyLovesBooks1"
+    },
+    {
+        "id": 8,
+        "username": "chris_parker",
+        "password": "CParker@Home45"
+    },
+    {
+        "id": 9,
+        "username": "sophie.jones",
+        "password": "S0ph!eJ0nes"
+    },
+    {
+        "id": 10,
+        "username": "alex.brown",
+        "password": "Alex4ever!"
     }
 ]

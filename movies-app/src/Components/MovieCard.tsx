@@ -5,7 +5,7 @@ import { randomInt } from 'crypto';
 
 const MovieCard = ({ movie }: { movie: Movie }) => {
 
-    let link = `/product?name=${movie.title}`
+    let link = `/product?name=${movie.title}&votecount=${movie.vote_count}`
     const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
     return (

@@ -11,6 +11,7 @@ interface FavouritesProps {
 const Favourites = ({ user, setUser }: FavouritesProps) => {
 
     const navigate = useNavigate();
+    let hasFavourites = false;
 
     useEffect(() => {
         if (!user.signedIn) {
@@ -22,6 +23,7 @@ const Favourites = ({ user, setUser }: FavouritesProps) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {user.favouriteMovies.map(({ movie, username }) => {
                 if (username === user.username) {
+                    hasFavourites = true;
                     return (
                         <div key={movie.id}>
                             <MovieCard movie={movie} />
@@ -30,6 +32,8 @@ const Favourites = ({ user, setUser }: FavouritesProps) => {
                 }
                 return null; // If username doesn't match, return null to skip rendering
             })}
+            {hasFavourites ? null : <div className="text-center w-screen text-[100px]"> No favourite movies </div>
+            }
         </div>
     );
 
