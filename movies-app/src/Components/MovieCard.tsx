@@ -10,7 +10,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
 
     return (
         <Link
-            className="border rounded-lg overflow-hidden shadow-md flex flex-col"
+            className="border rounded-lg overflow-hidden shadow-md flex flex-col bg-white"
             to={link}
         >
             <img

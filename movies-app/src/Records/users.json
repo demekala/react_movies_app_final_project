@@ -48,5 +48,10 @@
         "id": 10,
         "username": "alex.brown",
         "password": "Alex4ever!"
+    },
+    {
+        "id": 11,
+        "username": "giorgi",
+        "password": "giorgi"
     }
 ]

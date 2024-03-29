@@ -70,17 +70,10 @@ const Home = () => {
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const fetchData = async () => {
-            const response = await fetch(`${SEARCH_API}${query}`);
-            const jsonData = await response.json();
-            setMovieData(jsonData);
-            setIsSearching(true);
-        };
 
         if (query.length > 0) {
             const searchLink = `/?search=${query}`
             navigate(searchLink)
-            fetchData();
         }
 
     }
@@ -100,7 +93,7 @@ const Home = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 bg-[#faebd7]">
             <form className="flex justify-center mb-8" onSubmit={handleSearch}>
                 <input
                     type="text"

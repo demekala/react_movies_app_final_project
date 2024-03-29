@@ -50,7 +50,7 @@ const Login = ({ user, setUser }: LoginProps) => {
     };
 
     return (
-        <form onSubmit={handleSubmitEvent} className="max-w-md mx-auto">
+        <form onSubmit={handleSubmitEvent} className="max-w-md mx-auto mt-32">
             <div className="mb-6">
                 <label htmlFor="user-username" className="block text-sm font-medium text-gray-700">Username:</label>
                 <input
@@ -61,7 +61,6 @@ const Login = ({ user, setUser }: LoginProps) => {
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     onChange={handleInput}
                 />
-                <p className="mt-2 text-sm text-gray-500" id="user-username">Please enter your username.</p>
             </div>
 
             <div className="mb-6">
@@ -70,10 +69,10 @@ const Login = ({ user, setUser }: LoginProps) => {
                     type="password"
                     id="password"
                     name="password"
+                    placeholder="Enter your password"
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     onChange={handleInput}
                 />
-                <p className="mt-2 text-sm text-gray-500" id="user-password">Your password should be at least 6 characters long.</p>
             </div>
             <button type="submit" className="w-full bg-indigo-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
         </form>
